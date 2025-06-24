@@ -92,6 +92,11 @@ module.exports = {
   ],
   devtool: 'source-map',
   devServer: {
+    host: '0.0.0.0',
+    port: 8080,
+    public: '192.168.1.41:8080',
+    disableHostCheck: true,
+    historyApiFallback: true,
     contentBase: 'dist'
   }
 };
