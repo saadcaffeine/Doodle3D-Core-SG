@@ -94,7 +94,10 @@ module.exports = {
   devServer: {
     host: '0.0.0.0',
     port: 8080,
-    public: '192.168.1.41:8080',
+    allowedHosts: ['all'],     // Allow any hostname
+    headers: {
+      'Access-Control-Allow-Origin': '*',  // Optional: allow all origins (CORS)
+    },
     disableHostCheck: true,
     historyApiFallback: true,
     contentBase: 'dist'
